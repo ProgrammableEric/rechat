@@ -5,7 +5,9 @@
 -----
 
 ### [11, March]
-- d
+- Implement statis web page this week. 
+- React Components: 
+	-	
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjcwNTQ5NDg3XX0=
+eyJoaXN0b3J5IjpbMTk3MjY0NjY0MF19
 -->
