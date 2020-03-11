@@ -11,7 +11,8 @@
 - React Components: 
 	- left : Eric
 	- right: Olivia 
+- Next meeting: 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMTYzNzg3NiwtNzczMzE2MDM4LDE5Nz
+eyJoaXN0b3J5IjpbLTM2NzY2OTc3MywtNzczMzE2MDM4LDE5Nz
 I2NDY2NDBdfQ==
 -->
