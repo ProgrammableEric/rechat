@@ -7,10 +7,11 @@
 ### [11, March]
 - Implement statis web page this week. 
 - Responsive for iPad size. Shrink proportionally. 
-- 
+- Starting page 
 - React Components: 
-	-
+	- left : Eric
+	- right: Olivia 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjY5Mzk5MTM1LC03NzMzMTYwMzgsMTk3Mj
-Y0NjY0MF19
+eyJoaXN0b3J5IjpbMTE2MzkwODc4NSwtNzczMzE2MDM4LDE5Nz
+I2NDY2NDBdfQ==
 -->
