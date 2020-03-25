@@ -1,0 +1,106 @@
+.formContent {
+    box-sizing: border-box;
+    width: 320px;
+    height: 360px;
+    position: relative;
+    margin: 0 auto;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.green {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #B2C098;
+    filter: blur(50px);
+    z-index: -10;
+}
+
+#line1 {
+    position: absolute;
+    width: 75%;
+    height: 80%;
+    z-index: -5;
+    right: 0;
+    bottom: 0;
+}
+
+#line2 {
+    position: absolute;
+    width: 40%;
+    height: 100%;
+    z-index: -5;
+    right: 0;
+    bottom: 0;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+.rechatLogo {
+    margin: 25px auto;
+    width: 80px;
+    height: 80px;
+}
+
+.rechatLogo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 80px;
+    border: 0px;
+    margin: 0 auto;
+}
+
+.center {
+    text-align: center;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+input[type=text], input[type=password]{
+    box-sizing: border-box;
+    background-color: #D8D8D8;
+    border: 1px solid #4F4F4F;
+    border-radius: 5px;
+    padding: 10px 15px;
+    opacity: 40%;
+    font-size: 16px;
+    width: 75%;
+    text-decoration: none;
+}
+
+input[type=button] {
+    box-sizing: border-box;
+    background-color: #A19E9E;
+    border: 1px solid #979797;
+    margin: 20px auto;
+    border-radius: 5px;
+    padding: 10px 15px;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    width: 75%;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.side {
+    box-sizing: border-box;
+    display: inline-block;
+    font: 12px arial;
+    text-decoration: none;
+    color: #6D7071;
+    width: 75%;
+    text-align: right;
+}
+
+.side a {
+    margin: 0 3px;
+    font: 12px arial;
+    text-decoration: none;
+    color: #6D7071;
+}

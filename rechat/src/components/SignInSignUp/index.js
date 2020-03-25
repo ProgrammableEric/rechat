@@ -3,6 +3,9 @@ import './style.css';
 import PropTypes from 'prop-types';
 import { directive } from '@babel/types';
 import { Link } from 'react-router-dom';
+import logo from './logo.png';
+import line1 from './Line.png';
+import line2 from './Line2.png';
 
 export default class SignInSignUp extends Component {
     
@@ -11,6 +14,8 @@ export default class SignInSignUp extends Component {
         this.state = {
             name: '',
             password: '',
+            isLogin: true,
+            password2: '',
         }
     }
 
@@ -23,44 +28,74 @@ export default class SignInSignUp extends Component {
     };
 
     render() {
-        const { isLogin } = this.props;
-        const { name, password } = this.state;
+        const { isLogin } = this.state;
+        const { name, password, password2 } = this.state;
+        const buttonName = isLogin ? "Log In" : "Sign Up";
         
         return (
             <div className="formContent">
-                <div className="rechatLogo">
-                    <img src="../../../img/logo.png"></img>
+                <div className="green"></div>
+                
+                <img src={line1} id="line1"></img>
+                <img src={line2} id="line2"></img>
+                 
+                {/* 此处有margin collapse 问题 - 
+                两个或多个毗邻的普通流中的块元素垂直方向上的 margin 会折叠
+                解决:  生成 BFC 的元素不会和在流中的子元素发生空白边折叠。
+                触发block formatting context即可，触发的方法：
+                    1.   float不为none
+                    2.   overflow不为visible
+                    3.   display设为‘table-cell’, ‘table-caption’, 或‘inline-block’
+                    4.   position既不是static也不是relative
+                */}
+                <div className="container">
+                    <div className="rechatLogo">
+                        <img src={logo} alt="rechat logo"></img>
+                    </div>
+                    <div className="center">
+                        <input 
+                            type="text"
+                            name="name"
+                            value={name}
+                            onChange={this.handleChange}
+                            placeholder="Enter user name"
+                        />
+                    </div>
+                    <div className="center">
+                        <input 
+                            type="password"
+                            name="password"
+                            value={ password }
+                            onChange={ this.handleChange }
+                            placeholder="Enter password"
+                        />
+                    </div>
+                    {!isLogin && <div className="center">
+                        <input 
+                            type="password"
+                            name="password2"
+                            value={ password2 }
+                            onChange={ this.handleChange }
+                            placeholder="Repeat password"
+                        />
+                    </div>}
+                    <div className="center">
+                        {/* input (submit) button is better for taking user input as HTML forms. */}
+                        <input type="button" onClick={this.handleChange} value={buttonName} />
+                    </div>
+                    { isLogin && <div className="center">
+                        <div className="side">
+                            <a href="">
+                                <span className="signUp">Sign up</span>
+                            </a>
+                            <span>     |     </span>
+                            <a href="">
+                                <span className="forget">Forgot password</span>
+                            </a>
+                        </div> 
+                    </div>}
                 </div>
-                <div className="center">
-                    <input 
-                        type="text"
-                        name="name"
-                        value={name}
-                        onChange={this.handleChange}
-                        placeholder="Username"
-                    />
-                </div>
-                <div className="center">
-                    <input 
-                        type="password"
-                        name="password"
-                        value={ password }
-                        onChange={ this.handleChange }
-                        placeholder="Password"
-                    />
-                </div>
-                <div className="center">
-                    {/* input (submit) button is better for taking user input as HTML forms. */}
-                    <input type="button" onClick={this.handleChange} value="Log In" />
-                </div>
-                <div className="side">
-                    <a href="">
-                        <span className="signUp">Sign up</span>
-                    </a>
-                    <a href="">
-                        <span className="forget">Forgot password</span>
-                    </a>
-                </div> 
+                
             </div>
         
         )   
