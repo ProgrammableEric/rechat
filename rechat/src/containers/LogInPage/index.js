@@ -9,24 +9,19 @@ class LogIn extends Component {
         this.state = {
             name: '',
             password: '',
-            visible: false, 
+            modal: {
+                visible: false,
+            }
         }
         
         
         
     }
 
-    
-
-
-
-
-
-
 
 
 
     render() {
-        
+                
     }
 }

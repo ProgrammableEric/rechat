@@ -14,6 +14,8 @@ export default class SignInSignUp extends Component {
         this.state = {
             name: '',
             password: '',
+            isLogin: true,
+            password2: '',
         }
     }
 
@@ -26,8 +28,9 @@ export default class SignInSignUp extends Component {
     };
 
     render() {
-        const { isLogin } = this.props;
-        const { name, password } = this.state;
+        const { isLogin } = this.state;
+        const { name, password, password2 } = this.state;
+        const buttonName = isLogin ? "Log In" : "Sign Up";
         
         return (
             <div className="formContent">
@@ -44,7 +47,7 @@ export default class SignInSignUp extends Component {
                     2.   overflow不为visible
                     3.   display设为‘table-cell’, ‘table-caption’, 或‘inline-block’
                     4.   position既不是static也不是relative
-*/}
+                */}
                 <div className="container">
                     <div className="rechatLogo">
                         <img src={logo} alt="rechat logo"></img>
@@ -67,11 +70,20 @@ export default class SignInSignUp extends Component {
                             placeholder="Enter password"
                         />
                     </div>
+                    {!isLogin && <div className="center">
+                        <input 
+                            type="password"
+                            name="password2"
+                            value={ password2 }
+                            onChange={ this.handleChange }
+                            placeholder="Repeat password"
+                        />
+                    </div>}
                     <div className="center">
                         {/* input (submit) button is better for taking user input as HTML forms. */}
-                        <input type="button" onClick={this.handleChange} value="Log In" />
+                        <input type="button" onClick={this.handleChange} value={buttonName} />
                     </div>
-                    <div className="center">
+                    { isLogin && <div className="center">
                         <div className="side">
                             <a href="">
                                 <span className="signUp">Sign up</span>
@@ -81,7 +93,7 @@ export default class SignInSignUp extends Component {
                                 <span className="forget">Forgot password</span>
                             </a>
                         </div> 
-                    </div>
+                    </div>}
                 </div>
                 
             </div>
