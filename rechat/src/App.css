@@ -37,12 +37,9 @@
   }
 }
 
-.outer {
-  position: fixed;
+.wrapper {
+  width: 30%;
+  margin: 0 auto;
   height: 100vh;
-  width: 100%;
-  z-index: -10;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(to bottom right, #FFFFFF 0%, #2B2B2B 100%);     
+  background-color: #282c34;
 }

@@ -1,0 +1,47 @@
+.searchBox {
+    border-radius: 5px;
+    border: 1px solid #383636;
+    background-color: #555252;
+    margin: 20px 15px;
+    box-sizing: border-box;
+    height: 42px;
+    display: block;
+}
+
+ .icon {
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;;
+    padding: 8px 0;
+    display: inline-block;
+    margin: 0 0 0 10px;
+    vertical-align: bottom;
+}
+
+ .searchBox input {
+    font-size: 22px;
+    height: 40px;
+    border: none;
+    display: inline-block;
+    color: white;
+    background-color: #555252;
+    vertical-align: bottom;
+    width: calc(100%-40px);
+}
+
+::placeholder {
+    color: fff; 
+}
+
+::-webkit-input-placeholder {  /* Chrome/Opera/Safari */
+    color: #fff;
+  }
+  ::-moz-placeholder {  /* Firefox 19+ */
+    color: #fff;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: #fff;
+  }
+  :-ms-input-placeholder {  /* Edge/IE 10+ */
+    color: #fff;
+  }

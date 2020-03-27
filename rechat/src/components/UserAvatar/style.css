@@ -1,0 +1,31 @@
+.userAvatar {
+    border: none;
+    background-color: #585050;
+    margin: 0;
+    box-sizing: border-box;
+    height: 70px;
+    width: 100%;
+    display: block;
+}
+
+.icon {
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
+    padding: 4px 4px;
+    display: inline-block;
+    margin: 5px 20px;
+    vertical-align: bottom;
+}
+
+.userName {
+    display: inline-block;
+    box-sizing: border-box;
+    font-size: 24px;
+    padding: 23px 10px;
+    height: 100%;
+    width: calc(100%-70px);
+    text-align: center;
+    color: white;
+    
+}
