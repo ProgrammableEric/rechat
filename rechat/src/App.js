@@ -5,11 +5,12 @@ import SignInSignUp from './components/SignInSignUp';
 import SearchBox from './components/SearchBox';
 import LogIn from './containers/LogInPage';
 import Register from './containers/RegisterPage';
+import UserAvatar from './components/UserAvatar';
 
 function App() {
   return (
     <div className="wrapper">
-      <SearchBox></SearchBox>
+      <UserAvatar></UserAvatar>
     </div>
   );
 }
