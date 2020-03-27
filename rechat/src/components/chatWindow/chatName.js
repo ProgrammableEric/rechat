@@ -1,3 +1,6 @@
+import React, { Component } from 'react';
+import './style.css';
+
 class chatTitle extends React.Component {
     render() {
         return (
