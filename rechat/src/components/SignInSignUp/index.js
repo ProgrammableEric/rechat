@@ -14,7 +14,6 @@ export default class SignInSignUp extends Component {
         this.state = {
             name: '',
             password: '',
-            isLogin: true,
             password2: '',
         }
     }
@@ -28,7 +27,7 @@ export default class SignInSignUp extends Component {
     };
 
     render() {
-        const { isLogin } = this.state;
+        const { isLogin } = this.props;
         const { name, password, password2 } = this.state;
         const buttonName = isLogin ? "Log In" : "Sign Up";
         

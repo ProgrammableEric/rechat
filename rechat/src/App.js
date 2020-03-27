@@ -5,10 +5,15 @@ import SignInSignUp from './components/SignInSignUp';
 import SearchBox from './components/SearchBox';
 import LogIn from './containers/LogInPage';
 import Register from './containers/RegisterPage';
+
 function App() {
   return (
-    <Register></Register>
+    <div className="wrapper">
+      <SearchBox></SearchBox>
+    </div>
   );
 }
 
 export default App;
+
+
