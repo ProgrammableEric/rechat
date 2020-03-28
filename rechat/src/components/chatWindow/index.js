@@ -24,9 +24,21 @@ export default class ChatWind extends Component{
     clickToBack = () => {
         this.props.history.push('/');
     };
+
+    handleChange(event) {
+        this.setState({value: event.target.value});
+    };
+
+    handleSubmit(event) {
+        alert('A message was sent: ' + this.state.value);
+        event.preventDefault(); 
+    }
     
     render() {
         const {contactName, chatType, chatHistory} = this.props;
+        const listChats = chatHistory.map((meg) =>
+            <li>{meg}</li>    
+        );
         return(
             <div className='chatWind'>
                 <div className='chatTitle'>
@@ -35,10 +47,15 @@ export default class ChatWind extends Component{
                     </div>
                 </div>
                 <div className='chatWin'>
-                    
+                    <ul className='chatContent'>
+                        {listChats}
+                    </ul>
                 </div>
                 <div className='inputText'>
-
+                    <form onSubmit={this.handleSubmit}>
+                        <input type="text" id="message" value={this.state.value} onChange={this.handleChange} />
+                        <input type="submit" id="sendBtn" value="Send" />
+                    </form>
                 </div>
             </div>
             
