@@ -8,7 +8,7 @@ export default class ChatWind extends Component{
             contactName: '',
             isLogin: true,
             chatType: '',
-            chatHistory: [],
+            chatHistory: [], // what inside this list: {'name': '', 'id': int, 'time': '', 'msg':'', 'logo': link}
         }
     }
 
@@ -48,7 +48,7 @@ export default class ChatWind extends Component{
                 </div>
                 <div className='chatWin'>
                     <ul className='chatContent'>
-                        {listChats}
+                        <ChatItem>{listChats}</ChatItem>
                     </ul>
                 </div>
                 <div className='inputText'>
