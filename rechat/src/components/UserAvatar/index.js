@@ -19,6 +19,7 @@ export default class UserAvatar extends Component {
         // 区分图标尺寸，true if 为聊天界面图标，false 则为聊天列表图标
 
         return (
+
             <div className={chatIcon ? 'userAvatarChat' : 'userAvatar'}
                 onClick={this.clickAvatar}
             >
@@ -31,6 +32,7 @@ export default class UserAvatar extends Component {
 }
 
 UserAvatar.propTypes = {
+    myIcon: PropTypes.bool,
     chatIcon: PropTypes.bool,
 }
 

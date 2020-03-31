@@ -8,11 +8,12 @@ import Register from './containers/RegisterPage';
 import LeftHeader from './components/LeftHeader';
 import ChatItem from './components/ChatItem';
 import UserAvatar from './components/UserAvatar';
+import ChatWind from './components/chatWindow';
 
 function App() {
   return (
     <div className="wrapper">
-      <UserAvatar chatIcon={false} ></UserAvatar>
+      <ChatItem></ChatItem>
     </div>
   );
 }
