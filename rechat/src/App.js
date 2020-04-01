@@ -8,12 +8,18 @@ import Register from './containers/RegisterPage';
 import LeftHeader from './components/LeftHeader';
 import ChatItem from './components/ChatItem';
 import UserAvatar from './components/UserAvatar';
-import ChatWind from './components/chatWindow';
+// import ListItem from './components/ListItem'; 
+
+
 
 function App() {
+
+  const src = './assets/profile-icons/man-2.png';
+
   return (
     <div className="wrapper">
-      <ChatItem></ChatItem>
+      <img src={src}></img>
+      <UserAvatar src={src} size='40' ></UserAvatar>
     </div>
   );
 }
