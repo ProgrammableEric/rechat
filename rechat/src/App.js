@@ -11,15 +11,15 @@ import UserAvatar from './components/UserAvatar';
 // import ListItem from './components/ListItem'; 
 
 
-
 function App() {
 
-  const src = './assets/profile-icons/man-2.png';
+  const sex = 'man';
+  const iconIdenx = '2';
+  const src = `${sex}-${iconIdenx}.png`;
 
   return (
     <div className="wrapper">
-      <img src={src}></img>
-      <UserAvatar src={src} size='40' ></UserAvatar>
+      <UserAvatar src={require(`./assets/profile-icons/${src}`)} size='40' ></UserAvatar>
     </div>
   );
 }

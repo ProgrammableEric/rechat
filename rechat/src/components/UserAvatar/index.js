@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './style.css';
 import PropTypes from 'prop-types';
-// import { ReactComponent as Icon } from './man-6.svg'; 
-
 
 const defaultColors = [
     '#2ecc71', // emerald
@@ -24,7 +22,6 @@ function sumChars(str) {
 
     return sum;
 }
-
 
 // use this kind of export when there's no need for constructor/class state. 
 export default function UserAvatar(props){
@@ -57,13 +54,14 @@ export default function UserAvatar(props){
     // if profile picture given, then render icon as profile pic, otherwise as logo with first 
     // character of the user's name. 
     if (src) {
+        // React和ES6关系密切，而es6不支持在<img />标签内直接写图片的路径
         inner = <img style={imgStyle} src={src} alt={name}></img>
     } else {
         let background;
         if (color) { // color selected
             background = color;
         } else { // randomly pick a color 
-            const i = sumChars(name) % color.length;
+            const i = sumChars(name) % colors.length;
             background = colors[i];
         }
         innerStyle.backgroundColor = background;
@@ -87,7 +85,6 @@ UserAvatar.propTypes = {
     color: PropTypes.string,
     colors: PropTypes.array,
 }
-
 
 UserAvatar.defaultProps = {
     src: undefined,

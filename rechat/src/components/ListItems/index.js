@@ -5,12 +5,14 @@ import PropTypes from 'prop-types';
 
 
 export default class ListItem extends Component {
-    
-    const contactedUsers = {
-        
+
+    constructor(props) {
+        super(props);
     }
 
     render() {
+        const { dataList } = this.props;
         
+
     }
 }
