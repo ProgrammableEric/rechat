@@ -8,6 +8,7 @@ import Register from './containers/RegisterPage';
 import LeftHeader from './components/LeftHeader';
 import ChatItem from './components/ChatItem';
 import UserAvatar from './components/UserAvatar';
+import MainPageLeft from './components/MainPageLeft';
 // import ListItem from './components/ListItem'; 
 
 
@@ -18,9 +19,7 @@ function App() {
   const src = `${sex}-${iconIdenx}.png`;
 
   return (
-    <div className="wrapper">
-      <UserAvatar src={require(`./assets/profile-icons/${src}`)} size='40' ></UserAvatar>
-    </div>
+    <MainPageLeft></MainPageLeft>
   );
 }
 
