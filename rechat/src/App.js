@@ -8,13 +8,18 @@ import Register from './containers/RegisterPage';
 import LeftHeader from './components/LeftHeader';
 import ChatItem from './components/ChatItem';
 import UserAvatar from './components/UserAvatar';
-import ChatWind from './components/chatWindow';
+import MainPageLeft from './components/MainPageLeft';
+// import ListItem from './components/ListItem'; 
+
 
 function App() {
+
+  const sex = 'man';
+  const iconIdenx = '2';
+  const src = `${sex}-${iconIdenx}.png`;
+
   return (
-    <div className="wrapper">
-      <ChatItem></ChatItem>
-    </div>
+    <MainPageLeft></MainPageLeft>
   );
 }
 

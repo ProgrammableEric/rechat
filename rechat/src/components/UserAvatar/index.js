@@ -1,42 +1,96 @@
 import React, { Component } from 'react';
 import './style.css';
 import PropTypes from 'prop-types';
-import { ReactComponent as Icon } from './man-6.svg'; 
 
-export default class UserAvatar extends Component {
+const defaultColors = [
+    '#2ecc71', // emerald
+    '#3498db', // peter river
+    '#8e44ad', // wisteria
+    '#e67e22', // carrot
+    '#e74c3c', // alizarin
+    '#1abc9c', // turquoise
+    '#2c3e50', // midnight blue
+];
 
-    constructor(props) {
-        super(props);
+// decide background logo color based on length of user name. 
+// other ways to do it ??? 
+function sumChars(str) {
+    let sum = 0;
+    for (let i = 0; i < str.length; i += 1) {
+        sum += str.charCodeAt(i);
     }
 
-    clickAvatar = () => {
-        // Todo: click Avatar to show user profile. 
-    }; 
+    return sum;
+}
 
-    render() {
+// use this kind of export when there's no need for constructor/class state. 
+export default function UserAvatar(props){
 
-        const { chatIcon } = this.props; 
-        // 区分图标尺寸，true if 为聊天界面图标，false 则为聊天列表图标
+    const {
+        src, 
+        name, 
+        size, 
+        clickAvatar, 
+        color, 
+        colors = defaultColors,
+    } = props;
 
-        return (
-
-            <div className={chatIcon ? 'userAvatarChat' : 'userAvatar'}
-                onClick={this.clickAvatar}
-            >
-                <a href="">
-                    <Icon className="icon"></Icon>
-                </a>
-            </div>
-        )
+    const imgStyle = {
+        width: `${size}px`,
+        height: `${size}px`,
     }
+
+    const innerStyle = {
+        textAlign: 'center',
+        width: `${size}px`,
+        height: `${size}px`,
+        lineHeight: `${size}px`,
+        color: 'white',
+        display: 'inline-block',
+    }
+
+    let inner;
+
+    // if profile picture given, then render icon as profile pic, otherwise as logo with first 
+    // character of the user's name. 
+    if (src) {
+        // React和ES6关系密切，而es6不支持在<img />标签内直接写图片的路径
+        inner = <img style={imgStyle} src={src} alt={name}></img>
+    } else {
+        let background;
+        if (color) { // color selected
+            background = color;
+        } else { // randomly pick a color 
+            const i = sumChars(name) % colors.length;
+            background = colors[i];
+        }
+        innerStyle.backgroundColor = background;
+        
+        inner = <span>{name.charAt(0)}</span>
+    }
+
+    return (
+        <div className='userAvatar' style={innerStyle} onClick={clickAvatar}>
+            {inner}
+        </div>
+    )
+        // 区分图标尺寸，true if 为聊天界面图标，false 则为聊天列表图
 }
 
 UserAvatar.propTypes = {
-    myIcon: PropTypes.bool,
-    chatIcon: PropTypes.bool,
+    src: PropTypes.string,
+    name: PropTypes.string,
+    size: PropTypes.string,
+    clickAvatar: PropTypes.func,
+    color: PropTypes.string,
+    colors: PropTypes.array,
 }
 
-
 UserAvatar.defaultProps = {
-    chatIcon: false, 
+    src: undefined,
+    name: '?',
+    size: '40',
+    clickAvatar: undefined,
+    color: undefined,
+    colors: defaultColors,
 }

@@ -1,0 +1,86 @@
+.homePageList {
+    width: 100%;
+    height: 490px;
+    padding: 0;
+    margin: 0;
+    background-color: #8A8585;
+    overflow: scroll;
+}
+
+.homePageList li {
+    box-sizing: border-box;
+    height: 70px;
+    list-style: none;
+    border-bottom: 1px solid #A8A1A1;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    position: relative;
+}
+
+.content {
+    display: inline-block;
+    margin-left: 15px;
+    width: 80%;
+}
+
+.content .title {
+    padding-bottom: 4px;
+}
+
+.content .name {
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 500;
+    vertical-align: bottom;
+    overflow: hidden;
+}
+
+.content .time {
+    font-size: 14px;
+    font-weight: normal;
+    color: #4A4949;
+    right: 10px;
+    padding: 0 5px;
+    vertical-align: bottom;
+    /* Absolute 元素的父元素必须是relative 
+    只要父级元素设了position并且不是static（默认既是static），
+    那么设定了absolute的子元素即以此为包含块（最近的）。*/
+    position: absolute;
+}
+
+.content .message {
+    color: #4A4949;
+    font-size: 14px;
+    overflow: hidden;
+    white-space:nowrap;
+    /* 分行单词处理 */
+    word-break: break-word;
+    max-height: 20px;
+    text-overflow: ellipsis;
+    width: 70%;
+}
+
+.unread {
+    background-color: #E02020;
+    color: white;
+    border-radius: 50%;
+    right: 20px;
+    position: absolute;
+}
+
+.oneDigitsUnread {
+    font-size: 13px;
+    padding: 1px 6px;
+}
+
+.twoDigitsUnread {
+    font-size: 12px;
+    padding: 2px 4px;
+}
+
+.threeDigitsUnread {
+    font-size: 11px;
+    padding: 3px 5.5px;
+}
+

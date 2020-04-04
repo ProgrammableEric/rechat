@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from './node_modules/react';
 import './style.css';
 
 class chatTitle extends React.Component {
@@ -10,6 +10,7 @@ class chatTitle extends React.Component {
         );
     }
 }
+
 
 // ReactDOM.render(
 //     <chatTitle name=""/>,

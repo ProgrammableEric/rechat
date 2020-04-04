@@ -1,11 +1,10 @@
-.userAvatar {
+/* .userAvatar {
     height: 45px;
     width: 45px;
     display: inline-block;
 }
 
 .userAvatarChat {
-    /* todo - chatpage avatar, smaller ? */
     height: 35px;
     width: 35px;
     display: inline-block;
@@ -17,4 +16,9 @@
     height: 100%;
     margin: 0;
     padding: 0;
+} */
+
+.userAvatar {
+    position: relative;
+    border-radius: 50%;
 }
