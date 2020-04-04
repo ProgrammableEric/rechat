@@ -1,24 +1,27 @@
 .leftHeader{
+    box-sizing: border-box;
     border: none;
-    background-color: #585050;
+    background-color: #8A8585;
     margin: 0;
     height: 70px;
+    padding-top: 15px;
     width: 100%;
 }
 
 .userAvatar {
-    position: relative;
     top: 50%;
-    transform: translateY(-26px);
-    margin-left: 15px;
+    transform: translateY(-27px);
+    margin-left: 20px;
 }
 
 .myName {
+    top: 50%;
+    transform: translateY(-15px);
     box-sizing: border-box;
     display: inline-block;
-    font-size: 22px;
-    margin-left: 20px;
-    padding: 23px 10px;
+    font-size: 30px;
+    margin-left: 15px;
+    padding: 20px 10px;
     height: 100%;
     color: white;
 }

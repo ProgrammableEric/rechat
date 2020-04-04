@@ -9,6 +9,7 @@ import LeftHeader from './components/LeftHeader';
 import ChatItem from './components/ChatItem';
 import UserAvatar from './components/UserAvatar';
 import MainPageLeft from './components/MainPageLeft';
+import PrivateChat from './components/PrivateChat';
 // import ListItem from './components/ListItem'; 
 
 
@@ -19,10 +20,21 @@ function App() {
   const src = `${sex}-${iconIdenx}.png`;
 
   return (
-    <MainPageLeft></MainPageLeft>
+    <div className='wrapper'>
+      <PrivateChat />
+    </div>
   );
 }
 
 export default App;
+
+
+// 要修改：1. icon 左边距
+//        2. chatlist 切换效果
+//        3. search 效果
+//        4. leftheader 太空，加东西
+//        5. signinsignup 的背景
+
+
 
 
