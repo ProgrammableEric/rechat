@@ -5,17 +5,16 @@ import { ReactComponent as Icon } from './girl.svg';
 
 export default class ChatItem extends Component {
 
-<<<<<<< HEAD
     constructor(props) {
         super(props);
         this.state = {
             highLight: false,
             
         }
-=======
+    }
+    
     textDisp(){
         
->>>>>>> fc6de054143675f2448ac1a7faf759117c00576d
     }
 
     renderAlertNew (alertNew) {
@@ -37,12 +36,7 @@ export default class ChatItem extends Component {
     }
     
     render() {
-<<<<<<< HEAD
-
-        const {name, time, msg, alertNew} = this.props;
-=======
         const { id, img, time, name, msg, clickAvatar} = this.props;
->>>>>>> fc6de054143675f2448ac1a7faf759117c00576d
         return (
             <div className="wrapper">
                 <div className='chat-item'>
