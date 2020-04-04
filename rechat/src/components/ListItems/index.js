@@ -20,6 +20,7 @@ class ListItems extends Component {
         const   listItems = dataList && 
             dataList.map((data, index) => {
                 let message = data.message;
+                let name = data.username;
                 // Todo: shareURL functionality ...
                 // Todo: Groupchat functionality ... 
                 
@@ -30,19 +31,19 @@ class ListItems extends Component {
                 // Also,  If a value evaluates to false, 0, NaN, "", null, or undefined, it is falsey; all other values are truthy.
                 switch(data.unread && data.unread.toString().length) {
                     case 2: 
-                        unreadDot = 'twoDigitsUnread';
+                        unreadDot = 'unread twoDigitsUnread';
                         break;
                     case 3: 
-                        unreadDot = 'threeDigitsUnread';
+                        unreadDot = 'unread threeDigitsUnread';
                         break;
                     default: 
-                        unreadDot = 'oneDigitsUnread';
+                        unreadDot = 'unread oneDigitsUnread';
                 }   
 
                 return (
                     <li key={index}
                         style={
-                            data.selected ? {backgroundColor: '#D8D8D8'} : {backgroundColor: '#585050'}
+                            data.selected ? {backgroundColor: '#D8D8D8', boxShadow: '0 2px 2px #000000' } : {backgroundColor: '#8A8585'}
                     }>
                         <UserAvatar 
                             src={this._parseAvatar(data.avatar)}
@@ -51,12 +52,12 @@ class ListItems extends Component {
                         />
                         <div className="content">
                             <div className="title">
-                                <p className="name">{data.username}</p>
+                                <span className="name">{name}</span>
                                 <span className="time">{data.time}</span>
                             </div>
                             <div className="message">
-                                <span className="text">{message || 'no message.'}</span>
-                                { data.unread && <span className={unreadDot}>{data.unread>99 ? '99+' : data.unread}</span> }
+                                <span className="text">{ message ? `${name}: ${message}` : 'no message.'}</span>
+                                { (data.unread != 0) && <span className={unreadDot}>{data.unread>99 ? '...' : data.unread}</span> }
                             </div>
                         </div>
                     </li>

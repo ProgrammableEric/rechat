@@ -30,7 +30,7 @@ class MainPageLeft extends Component {
                     username: "Declan",
                     user_id: 2,
                     message: "我在路上啊啊啊",
-                    unread: 1,
+                    unread: 157,
                     time: "10:30",
                     avatar: "man-6",
                     selected: false, 
@@ -38,12 +38,30 @@ class MainPageLeft extends Component {
                 { 
                     username: "Sue",
                     user_id: 3,
-                    message: "Please check my email ",
+                    message: "",
                     unread: 0,
                     time: "3/29",
                     avatar: "woman-3",
                     selected: true, 
                 }, 
+                { 
+                    username: "Jenny",
+                    user_id: 4,
+                    message: "omg look at this !",
+                    unread: 15,
+                    time: "3/21",
+                    avatar: "woman-5",
+                    selected: false, 
+                },
+                { 
+                    username: "Ella",
+                    user_id: 4,
+                    message: "This is a long message ... This is a long message ...This is a long message ...This is a long message ...This is a long message ...",
+                    unread: 7,
+                    time: "3/20",
+                    avatar: "woman-1",
+                    selected: false, 
+                },
             ]
         }
     }
