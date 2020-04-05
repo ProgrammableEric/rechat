@@ -17,6 +17,7 @@ export default class LeftHeader extends Component {
                     src={this._parseAvatar('man-1')}
                     name='me'
                     size="55"
+                    type="myAvatar"
                 />
                 <span className="myName">Eric</span>
             </div>

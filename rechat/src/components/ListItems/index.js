@@ -46,10 +46,10 @@ class ListItems extends Component {
                             data.selected ? {backgroundColor: '#D8D8D8', boxShadow: '0 2px 2px #000000' } : {backgroundColor: '#8A8585'}
                     }>
                         <UserAvatar 
-                            className='avatar'
                             src={this._parseAvatar(data.avatar)}
                             name={data.name}
                             size="40" 
+                            type='listAvatar'
                         />
                         <div className="content">
                             <div className="title">

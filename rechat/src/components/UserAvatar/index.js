@@ -31,8 +31,9 @@ export default function UserAvatar(props){
         name, 
         size, 
         clickAvatar, 
-        color, 
+        color,  
         colors = defaultColors,
+        type,   // 'listAvatar', 'myAvatar', 'chatAvatar' - for style difference for different avatar usages. 
     } = props;
 
     const imgStyle = {
@@ -70,7 +71,7 @@ export default function UserAvatar(props){
     }
 
     return (
-        <div className='userAvatar' style={innerStyle} onClick={clickAvatar}>
+        <div className={`userAvatar ${type}`} style={innerStyle} onClick={clickAvatar}>
             {inner}
         </div>
     )
@@ -84,6 +85,7 @@ UserAvatar.propTypes = {
     clickAvatar: PropTypes.func,
     color: PropTypes.string,
     colors: PropTypes.array,
+    type: PropTypes.string,
 }
 
 UserAvatar.defaultProps = {
@@ -93,4 +95,5 @@ UserAvatar.defaultProps = {
     clickAvatar: undefined,
     color: undefined,
     colors: defaultColors,
+    type: 'listAvatar', 
 }
