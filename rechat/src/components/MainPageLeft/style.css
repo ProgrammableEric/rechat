@@ -1,4 +1,48 @@
 .mainPageLeftWrapper {
+    display: flex;
+    flex-direction: column;
     width: 300px;
-    height: 500px;
+    height: 800px;
+    background-color: #8A8585;
+    margin: 0;
+    padding: 0;
+}
+
+.icons {
+    text-align: center;
+    margin: 0 15px 20px;
+}
+
+.chatWrapper, .contactWrapper, .noteWrapper {
+    display: inline-block;
+    width: 33.33%;
+    text-align: center;
+}
+
+.chatIcon {
+    width: 34px;
+    height: 34px;
+}
+
+.contactIcon {
+    width: 34px;
+    height: 34px;
+}
+
+.noteIcon {
+    width: 34px;
+    height: 34px;
+}
+
+.settingWrapper {
+    position: relative;
+    flex: 1;
+}
+
+.settingIcon {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    left: 20px;
+    bottom: 20px;
 }

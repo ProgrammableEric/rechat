@@ -9,7 +9,7 @@ export default class SearchBox extends Component {
         super(props);
         this.state = {
             searchField: '',
-            isSearching: true
+            isSearching: true,
         }; 
     }
 

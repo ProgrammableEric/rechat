@@ -49,6 +49,7 @@ class ListItems extends Component {
                             src={this._parseAvatar(data.avatar)}
                             name={data.name}
                             size="40" 
+                            type='listAvatar'
                         />
                         <div className="content">
                             <div className="title">

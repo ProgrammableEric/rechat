@@ -1,0 +1,12 @@
+.privateChatWrapper {
+    background-color: white;
+    width: 1100px;
+    height: 800px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 2px solid gray;
+    margin: 20px auto;
+}
+
+
+
