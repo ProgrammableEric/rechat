@@ -2,25 +2,39 @@ import React, { Component } from 'react';
 import './style.css';
 import PropTypes from 'prop-types';
 import { ReactComponent as Icon } from './girl.svg';
+import UserAvatar from '../UserAvatar';
 
 export default class ChatItem extends Component {
 
-    textDisp(){
-    
+    constructor(props) {
+        super(props);
+        console.log(props)
     }
     
+    _parseAvatar = (avatar => {
+        const img = `${avatar}.png`;
+        return require(`../../assets/profile-icons/${img}`);
+    })
+
     render() {
 
-        const { id, img, time, name, msg, clickAvatar} = this.props;
-
+        const chatHistory = this.props.chatContent;
         return (
             <div className="wrapper">
-                <div className='chat-item'>
-                    <img name={name} src={img} width='40px' height='40px'/>
-                    <span>{name}</span>
-                    <span>{time}</span>
-                    <div className='message'>this.textDisp(msg)</div>
-                </div>
+                {chatHistory.map((obj, idx) => 
+                    <div className='single-meg'>
+                        <div className='username'>{obj.username}</div>
+                        <div className='content'>
+                            <UserAvatar 
+                                src={this._parseAvatar(obj.avatar)}
+                                name={obj.name}
+                                size="40" 
+                            />
+                            {obj.message}
+                        </div>
+                        <div className='time'>{obj.time}</div>
+                    </div>
+                )}
             </div>
         )
     }

@@ -1,15 +1,41 @@
-import React, { Component } from './node_modules/react';
+import React, { Component } from 'react';
 import './style.css';
+import ChatItem from '../ChatItem'
 
-export default class ChatWind extends Component{
+class ChatWind extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            contactName: '',
+            contactName: 'Declan',
             isLogin: true,
-            chatType: '',
-            chatHistory: [], // what inside this list: {'name': '', 'id': int, 'time': '', 'msg':'', 'logo': link}
+            chatType: 'private',
+            chatHistory: [
+                {   
+                    username: "Jackson",
+                    user_id: 1,
+                    message: "我在路上",
+                    time: "12:35",
+                    avatar: "man-2",
+                },
+                {
+                    username: "Declan",
+                    user_id: 2,
+                    message: "我在路上啊啊啊",
+                    time: "12:36",
+                    avatar: "man-6",
+                },
+                {   
+                    username: "Jackson",
+                    user_id: 1,
+                    message: "我在路上lala",
+                    time: "12:37",
+                    avatar: "man-2",
+                },
+
+            ], // what inside this list: {'name': '', 'id': int, 'time': '', 'msg':'', 'logo': link}
         }
+        console.log(this.state.chatHistory)
+        
     }
 
     _clickChatInfo = () => {
@@ -35,10 +61,8 @@ export default class ChatWind extends Component{
     }
     
     render() {
-        const {contactName, chatType, chatHistory} = this.props;
-        const listChats = chatHistory.map((meg) =>
-            <li>{meg}</li>    
-        );
+        const {contactName, chatType, chatHistory} = this.state;
+        
         return(
             <div className='chatWind'>
                 <div className='chatTitle'>
@@ -47,9 +71,7 @@ export default class ChatWind extends Component{
                     </div>
                 </div>
                 <div className='chatWin'>
-                    <ul className='chatContent'>
-                        <ChatItem>{listChats}</ChatItem>
-                    </ul>
+                    <ChatItem chatContent = {chatHistory}></ChatItem>
                 </div>
                 <div className='inputText'>
                     <form onSubmit={this.handleSubmit}>
@@ -57,9 +79,11 @@ export default class ChatWind extends Component{
                         <input type="submit" id="sendBtn" value="Send" />
                     </form>
                 </div>
-            </div>
+            </div> 
             
         )
     }
 
 }
+
+export default ChatWind;

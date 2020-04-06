@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './style.css';
 import PropTypes from 'prop-types';
 import { directive } from '@babel/types';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import logo from './logo.png';
 import line1 from './Line.png';
 import line2 from './Line2.png';
