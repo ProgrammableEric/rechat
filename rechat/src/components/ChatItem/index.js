@@ -19,20 +19,43 @@ export default class ChatItem extends Component {
     render() {
 
         const chatHistory = this.props.chatContent;
+        console.log(this.props.user);
         return (
             <div className="wrapper">
                 {chatHistory.map((obj, idx) => 
                     <div className='single-meg'>
-                        <div className='username'>{obj.username}</div>
-                        <div className='content'>
-                            <UserAvatar 
-                                src={this._parseAvatar(obj.avatar)}
-                                name={obj.name}
-                                size="40" 
-                            />
-                            {obj.message}
-                        </div>
-                        <div className='time'>{obj.time}</div>
+                        {obj.username==this.props.user ? (
+                                <div className='mywrap-content'>
+                                    <div className='mycontent'>
+                                        <div className='mydetails'>{'Me'}<span>  </span>{obj.time}</div>
+                                        <div className='mymeg'>{obj.message}</div>
+                                    </div>
+                                    <div className='mylogo'>
+                                        <UserAvatar 
+                                            src={this._parseAvatar(obj.avatar)}
+                                            name={obj.name}
+                                            size="40" 
+                                        />
+                                    </div>
+                                </div>
+                            ) : (
+                                <div className='wrap-content'>
+                                    <div className='logo'>
+                                        <UserAvatar 
+                                            src={this._parseAvatar(obj.avatar)}
+                                            name={obj.name}
+                                            size="40" 
+                                        />
+                                    </div>
+                                    <div className='content'>
+                                        <div className='userdetails'>{obj.username}<span>  </span>{obj.time}</div>
+                                        <div className='meg'>{obj.message}</div>
+                                    </div>
+                                </div>
+                            )
+
+                        }
+                        
                     </div>
                 )}
             </div>

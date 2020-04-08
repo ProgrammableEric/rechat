@@ -62,7 +62,11 @@ class ChatWind extends Component{
     
     render() {
         const {contactName, chatType, chatHistory} = this.state;
-        
+        const st = {position: 'absolute', height: '100%', width: '90%', 'box-sizing':'none', border:'1px solid blue', 'background-color':'transparent',
+            borderradius:'0px', opacity:'100%', 'min-height': '190px', 'overflow-y':'scroll'};
+        const stBtn = {position: 'absolute', right:'10px', top: '200%'};
+
+
         return(
             <div className='chatWind'>
                 <div className='chatTitle'>
@@ -71,12 +75,12 @@ class ChatWind extends Component{
                     </div>
                 </div>
                 <div className='chatWin'>
-                    <ChatItem chatContent = {chatHistory}></ChatItem>
+                    <ChatItem chatContent = {chatHistory} user = {contactName}></ChatItem>
                 </div>
                 <div className='inputText'>
                     <form onSubmit={this.handleSubmit}>
-                        <input type="text" id="message" value={this.state.value} onChange={this.handleChange} />
-                        <input type="submit" id="sendBtn" value="Send" />
+                        <input type="text" id="message" value={this.state.value} onChange={this.handleChange} style={st}/>
+                        <input type="submit" id="sendBtn" value="Send" style={stBtn}/>
                     </form>
                 </div>
             </div> 

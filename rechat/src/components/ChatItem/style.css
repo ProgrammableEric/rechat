@@ -1,0 +1,73 @@
+.wrapper{
+    position: relative;
+    background-color: transparent;
+}
+
+.single-meg{
+    margin-top: 20px;
+    display: flex;
+}
+
+.mywrap-content{
+    width: 860px;
+    height: fit-content;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.mylogo{
+    display: inline-block;
+}
+
+.mycontent{
+    right: 10px;
+    padding: 0 0 0 0;
+    display: inline-block;
+}
+
+.mydetails{
+    font-size: 12px;
+    margin-bottom: 5px;
+    text-align: right;
+}
+
+.mymeg{
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid rgb(158, 156, 156);
+    background-color: #B2C098;
+    width: fit-content;
+    height: fit-content;
+    font-size: 16px;
+}
+
+.wrap-content{
+    width: 860px;
+    height: fit-content;
+}
+
+.logo{
+    display: inline-block;
+}
+
+.content{
+    padding: 0 0 0 0;
+    display: inline-block;
+}
+
+.userdetails{
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.meg{
+    box-sizing: border-box;
+    border-radius: 10px;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid rgb(158, 156, 156);
+    background-color: #D8D8D8;
+    width: fit-content;
+    height: fit-content;
+    font-size: 16px;
+}
