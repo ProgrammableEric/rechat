@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import './style.css';
-import ChatItem from '../ChatItem'
+import ChatItem from '../ChatItem';
+
+// import imgs 
+import emoji from './emoji.svg';
+import plus from './plus.svg';
+import folder from './folder.svg';
 
 class ChatWind extends Component{
     constructor(props) {
@@ -63,7 +68,7 @@ class ChatWind extends Component{
     render() {
         const {contactName, chatType, chatHistory} = this.state;
         const st = {position: 'absolute', width: '774px', 'box-sizing':'none', border:'none', 'background-color':'transparent',
-            borderradius:'0px', opacity:'100%', 'min-height': '160px'};
+            borderradius:'0px', opacity:'100%', height: 'fit-content'};
         const stBtn = {position: 'absolute', right:'10px'};
 
 
@@ -76,6 +81,11 @@ class ChatWind extends Component{
                 </div>
                 <div className='chatWin'>
                     <ChatItem chatContent = {chatHistory} user = {contactName}></ChatItem>
+                </div>
+                <div className='functions'>
+                    <img className='emoji' src={emoji}></img>
+                    <img className='plus' src={plus}></img>
+                    <img className='folder' src={folder}></img>
                 </div>
                 <div className='inputText'>
                     <form onSubmit={this.handleSubmit}>

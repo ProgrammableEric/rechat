@@ -83,7 +83,7 @@ UserAvatar.propTypes = {
     name: PropTypes.string,
     size: PropTypes.string,
     clickAvatar: PropTypes.func,
-    color: PropTypes.string,
+    color: PropTypes.string, 
     colors: PropTypes.array,
     type: PropTypes.string,
 }

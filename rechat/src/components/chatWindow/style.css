@@ -29,7 +29,34 @@
     scroll-behavior: smooth;
 }
 
-.inputText::before{
+.functions{
+    display: block;
+    height: 27px;
+    margin-bottom: 15px;
+}
+
+.emoji{
+    display: inline-block;
+    height: 27px;
+    width: 27px;
+    margin-left: 10px;
+}
+
+.plus{
+    display: inline-block;
+    height: 27px;
+    width: 27px;
+    margin-left: 10px;
+}
+
+.folder{
+    display: inline-block;
+    height: 27px;
+    width: 27px;
+    margin-left: 10px;
+}
+
+.functions::before{
     content: '';
     width: 860px;
     height: 5px;
@@ -46,7 +73,7 @@
     padding-left: 10px;
     width: 850px;
     background-color: transparent;
-    height: 220px;
+    height: 180px;
     resize: vertical;
     overflow: auto;
     min-height: 180px;
