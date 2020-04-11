@@ -6,15 +6,14 @@
 }
 
 .chatTitle{
-    position: absolute;
-    top: 0px;
-    height: 70px;
+    display: block;
+    height: 50px;
     width: 100%;
     background-color: #B2C098;
     text-align: center;
 }
 .name{
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -22,25 +21,38 @@
 }
 
 .chatWin{
-    position: absolute;
-    top: 70px;
+    display: block;
     height: 500px;
     width: 100%;
     background-color: transparent;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    
+}
+
+.inputText::before{
+    content: '';
+    width: 860px;
+    height: 5px;
+    background-color: rgb(241, 238, 238);
+    background-size: 860px 5px;
+    display: block;
+    margin-left: -10px;
+    margin-bottom: 10px;
 }
 
 .inputText{
-    position: absolute;
+    display: block;
     padding-top: 10px;
     padding-left: 10px;
-    bottom: 220px;
-    width: 860px;
+    width: 850px;
     background-color: transparent;
+    height: 220px;
+    resize: vertical;
+    overflow: auto;
+    min-height: 180px;
+    max-height: 230px;
 }
-
+/* 
 .inputText::after {
     content: "";
     background: rgba(199, 196, 196, 0.5);
@@ -50,7 +62,7 @@
     height: 30%;
     width: 860px;
     margin-bottom: 10px;
-}
+} */
 
 /* width */
 ::-webkit-scrollbar {
@@ -59,7 +71,7 @@
   
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
+    background: transparent; 
 }
    
 /* Handle */

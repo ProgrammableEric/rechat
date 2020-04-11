@@ -11,7 +11,7 @@ import UserAvatar from './components/UserAvatar';
 import MainPageLeft from './components/MainPageLeft';
 import PrivateChat from './components/PrivateChat';
 // import ListItem from './components/ListItem'; 
-import ChatWind from './components/ChatWindow';
+import ChatWind from './components/chatWindow';
 
 function App() {
 

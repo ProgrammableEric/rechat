@@ -62,9 +62,9 @@ class ChatWind extends Component{
     
     render() {
         const {contactName, chatType, chatHistory} = this.state;
-        const st = {position: 'absolute', height: '100%', width: '90%', 'box-sizing':'none', border:'1px solid blue', 'background-color':'transparent',
-            borderradius:'0px', opacity:'100%', 'min-height': '190px', 'overflow-y':'scroll'};
-        const stBtn = {position: 'absolute', right:'10px', top: '200%'};
+        const st = {position: 'absolute', width: '774px', 'box-sizing':'none', border:'none', 'background-color':'transparent',
+            borderradius:'0px', opacity:'100%', 'min-height': '160px'};
+        const stBtn = {position: 'absolute', right:'10px'};
 
 
         return(
