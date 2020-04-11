@@ -56,6 +56,7 @@ export default function UserAvatar(props){
     // character of the user's name. 
     if (src) {
         // React和ES6关系密切，而es6不支持在<img />标签内直接写图片的路径
+        console.log(src)
         inner = <img style={imgStyle} src={src} alt={name}></img>
     } else {
         let background;
