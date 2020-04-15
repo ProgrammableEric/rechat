@@ -19,7 +19,7 @@ export default class ChatItem extends Component {
     render() {
 
         const chatHistory = this.props.chatContent;
-        console.log(this.props.user);
+        console.log(chatHistory);
         return (
             <div className="wrapper">
                 {chatHistory.map((obj, idx) => 
@@ -33,7 +33,7 @@ export default class ChatItem extends Component {
                                     <div className='mylogo'>
                                         <UserAvatar 
                                             src={this._parseAvatar(obj.avatar)}
-                                            name={obj.name}
+                                            name={obj.username}
                                             size="40" 
                                         />
                                     </div>
