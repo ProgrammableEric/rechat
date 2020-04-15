@@ -53,8 +53,8 @@ class ListItems extends Component {
                         />
                         <div className="content">
                             <div className="title">
-                                <span className="name">{name}</span>
-                                <span className="time">{data.time}</span>
+                                <span className="chatListName">{name}</span>
+                                <span className="chatListTime">{data.time}</span>
                             </div>
                             <div className="message">
                                 <span className="text">{ message ? `${name}: ${message}` : 'no message.'}</span>

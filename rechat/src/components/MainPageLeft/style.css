@@ -1,8 +1,8 @@
 .mainPageLeftWrapper {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    height: 800px;
+    width: 240px;
+    height: 650px;
     background-color: #8A8585;
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@
 
 .icons {
     text-align: center;
-    margin: 0 15px 20px;
+    margin: 4px 6px 10px;
 }
 
 .chatWrapper, .contactWrapper, .noteWrapper {
@@ -20,18 +20,18 @@
 }
 
 .chatIcon {
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
 }
 
 .contactIcon {
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
 }
 
 .noteIcon {
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
 }
 
 .settingWrapper {
@@ -41,8 +41,8 @@
 
 .settingIcon {
     position: absolute;
-    width: 34px;
-    height: 34px;
+    width: 30px;
+    height: 30px;
     left: 20px;
     bottom: 20px;
 }

@@ -3,25 +3,23 @@
     border: none;
     background-color: #8A8585;
     margin: 0;
-    height: 70px;
-    padding-top: 15px;
+    height: 60px;
     width: 100%;
+    text-align: left;
 }
 
 .myAvatar {
-    top: 50%;
-    transform: translateY(-27px);
+    vertical-align: middle;
     margin-left: 20px;
 }
 
 .myName {
-    top: 50%;
-    transform: translateY(-15px);
-    box-sizing: border-box;
     display: inline-block;
-    font-size: 30px;
-    margin-left: 15px;
-    padding: 20px 10px;
+    vertical-align: middle;
+    font-size: 1.2rem;
+    margin-left: 10px;
     height: 100%;
+    font-weight: 700;
     color: white;
+    line-height: 60px;
 }

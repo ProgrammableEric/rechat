@@ -95,7 +95,7 @@ class MainPageLeft extends Component {
                     unread: 0,
                     time: "3/29",
                     avatar: "woman-3",
-                    selected: true, 
+                    selected: false, 
                 }, 
                 { 
                     username: "Jenny",

@@ -12,7 +12,7 @@ import MainPageLeft from './components/MainPageLeft';
 import PrivateChat from './components/PrivateChat';
 
 // import ListItem from './components/ListItem'; 
-import ChatWind from './components/chatWindow';
+import ChatWind from './components/ChatWindow';
 
 function App() {
 
@@ -24,7 +24,8 @@ function App() {
     // <div className='wrapper'>
     //   <PrivateChat />
     // </div>
-    <ChatWind />
+    // <ChatWind />
+    <PrivateChat />
   );
 }
 
