@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
 import MainPageLeft from '../../components/MainPageLeft';
+import ChatWind from '../../components/chatWindow';
 
 export default class PrivateChat extends Component {
 
@@ -8,9 +9,11 @@ export default class PrivateChat extends Component {
     render() {
         return (
             <div className="backgroundOverlay">
-            <div className="privateChatWrapper">
-                <MainPageLeft className="pageLeft"/>
-            </div>
+                <div className="privateChatWrapper">
+                    <MainPageLeft className="pageLeft"/>
+                    <ChatWind className="pageRight"/>
+                </div>
+                
             </div>
         ) 
     }

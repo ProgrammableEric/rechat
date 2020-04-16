@@ -7,7 +7,7 @@ import emoji from './emoji.svg';
 import plus from './plus.svg';
 import folder from './folder.svg';
 
-class ChatWind extends Component{
+export default class ChatWind extends Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -67,9 +67,9 @@ class ChatWind extends Component{
     
     render() {
         const {contactName, chatType, chatHistory} = this.state;
-        const st = {position: 'absolute', width: '774px', 'box-sizing':'none', border:'none', 'background-color':'transparent',
-            borderradius:'0px', opacity:'100%', height: 'fit-content'};
-        const stBtn = {position: 'absolute', right:'10px'};
+        const st = {'min-width': '650px','max-width': '690px', 'box-sizing':'none', border:'none', 'background-color':'transparent',
+            borderradius:'0px', opacity:'100%', display:'inline-block', resize: 'horizontal', height: 'fit-content'};
+        const stBtn = {display:'inline-block'};
 
 
         return(
@@ -82,12 +82,12 @@ class ChatWind extends Component{
                 <div className='chatWin'>
                     <ChatItem chatContent = {chatHistory} user = {contactName}></ChatItem>
                 </div>
-                <div className='functions'>
-                    <img className='emoji' src={emoji}></img>
-                    <img className='plus' src={plus}></img>
-                    <img className='folder' src={folder}></img>
-                </div>
                 <div className='inputText'>
+                    <div className='functions'>
+                        <img className='emoji' src={emoji}></img>
+                        <img className='plus' src={plus}></img>
+                        <img className='folder' src={folder}></img>
+                    </div>
                     <form onSubmit={this.handleSubmit}>
                         <input type="text" id="message" value={this.state.value} onChange={this.handleChange} style={st}/>
                         <input type="submit" id="sendBtn" value="Send" style={stBtn}/>
@@ -100,4 +100,4 @@ class ChatWind extends Component{
 
 }
 
-export default ChatWind;
+// export default ChatWind;

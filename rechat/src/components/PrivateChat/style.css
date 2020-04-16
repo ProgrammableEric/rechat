@@ -1,11 +1,16 @@
 .backgroundOverlay {
-    text-align: center;
+    min-width: 1440px;
+    min-height: 800px;
     background-image: linear-gradient(to bottom right, lightgrey, #545454);
-    padding: 3rem 0;
+    background-size: 100%;
 }
 
 
 .privateChatWrapper {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 10%);
     background-color: white;
     width: 1000px;
     height: 650px;
@@ -13,7 +18,7 @@
     border: 1px solid gray;
     overflow: hidden;
     border: 1px solid black;
-    margin: 20px auto;
+    margin: 0;
     box-shadow: 5px 5px 8px #3d3d3d;
 }
 

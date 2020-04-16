@@ -1,7 +1,11 @@
 .mainPageLeftWrapper {
-    display: flex;
-    flex-direction: column;
-    width: 240px;
+    display: block;
+    float: left;
+    width: 220px;
+    max-width: 260px;
+    min-width: 220px;
+    resize: horizontal;
+    overflow-x: scroll;
     height: 650px;
     background-color: #8A8585;
     margin: 0;
@@ -40,9 +44,9 @@
 }
 
 .settingIcon {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    left: 20px;
-    bottom: 20px;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    left: 15px;
+    bottom: -35px;
 }

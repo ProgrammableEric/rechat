@@ -12,7 +12,7 @@ import MainPageLeft from './components/MainPageLeft';
 import PrivateChat from './components/PrivateChat';
 
 // import ListItem from './components/ListItem'; 
-import ChatWind from './components/ChatWindow';
+import ChatWind from './components/chatWindow';
 
 function App() {
 
@@ -21,12 +21,14 @@ function App() {
   const src = `${sex}-${iconIdenx}.png`;
 
   return (
-    // <div className='wrapper'>
-    //   <PrivateChat />
-    // </div>
-    // <ChatWind />
-    // <PrivateChat />
-    <SignInSignUp isLogin={true}/>
+    <div>
+      <div className='wrapper'>
+        <PrivateChat />
+      </div>
+      
+      {/* <PrivateChat /> */}
+    </div>
+    // <SignInSignUp isLogin={true}/>
   );
 }
 

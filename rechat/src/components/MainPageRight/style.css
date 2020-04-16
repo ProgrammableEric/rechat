@@ -1,0 +1,9 @@
+.mainPageRightWrapper {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 650px;
+    background-color: #8A8585;
+    margin: 0;
+    padding: 0;
+}
