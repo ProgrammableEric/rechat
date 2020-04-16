@@ -25,7 +25,8 @@ function App() {
     //   <PrivateChat />
     // </div>
     // <ChatWind />
-    <PrivateChat />
+    // <PrivateChat />
+    <SignInSignUp isLogin={true}/>
   );
 }
 

@@ -32,6 +32,7 @@ export default class SignInSignUp extends Component {
         const buttonName = isLogin ? "Log In" : "Sign Up";
         
         return (
+            <div className="pageOverlay">
             <div className="formContent">
                 <div className="green"></div>
                 
@@ -96,7 +97,7 @@ export default class SignInSignUp extends Component {
                 </div>
                 
             </div>
-        
+            </div>
         )   
     }
 
