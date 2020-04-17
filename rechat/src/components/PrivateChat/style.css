@@ -1,6 +1,8 @@
 .backgroundOverlay {
     min-width: 1440px;
     min-height: 800px;
+    width: 100vw;
+    height: 100vh;
     background-image: linear-gradient(to bottom right, lightgrey, #545454);
     background-size: 100%;
 }
@@ -10,9 +12,9 @@
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 10%);
+    transform: translate(-50%, -50%);
     background-color: white;
-    width: 1000px;
+    width: fit-content;
     height: 650px;
     border-radius: 5px;
     border: 1px solid gray;
