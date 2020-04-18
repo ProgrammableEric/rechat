@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
 import MainPageLeft from '../../components/MainPageLeft';
-import ChatWind from '../../components/chatWindow';
+import ChatWind from '../../components/ChatWindow';
 
 export default class PrivateChat extends Component {
 
