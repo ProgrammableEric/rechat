@@ -3,7 +3,7 @@
 English | [简体中文](./README-ch.md)
 
 ## Rechat
-A online chatting app using React. This is a practice project for learning React.js, Node.js, and more. 
+An online chatting app using React. This is a practice project for learning React.js, Node.js, and more. 
 
 ### Address
 [GitHub](https://github.com/ProgrammableEric/rechat)
