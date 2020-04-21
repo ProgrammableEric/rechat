@@ -1,11 +1,13 @@
 .mainPageLeftWrapper {
-    display: block;
-    float: left;
-    width: 220px;
-    max-width: 260px;
+    /* display: block; */
+    /* width: 220px; */
+    /* max-width: 260px;
     min-width: 220px;
     resize: horizontal;
-    overflow-x: scroll;
+    overflow-x: scroll; */
+    position: relative;
+    float: left;
+    width: 260px;
     height: 650px;
     background-color: #8A8585;
     margin: 0;

@@ -10,11 +10,12 @@
 
 .privateChatWrapper {
     position: relative;
+    display: flex;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    width: fit-content;
+    width: 1000px;
     height: 650px;
     border-radius: 5px;
     border: 1px solid gray;
@@ -22,6 +23,18 @@
     border: 1px solid black;
     margin: 0;
     box-shadow: 5px 5px 8px #3d3d3d;
+}
+
+#line{
+    position: relative;
+    float: left;
+    width: 2px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    cursor: w-resize;
+    border: 1px solid red;
+    box-sizing: border-box;
 }
 
 
