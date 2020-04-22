@@ -1,16 +1,31 @@
 import React, { Component } from 'react';
 import './style.css';
 import MainPageLeft from '../../components/MainPageLeft';
-import ChatWind from '../../components/ChatWindow';
+import ChatWind from '../ChatWindow';
 
 
 export default class PrivateChat extends Component {
-    handleDrag(){
-        window.onload = function(){
-            var line = this.document.getElementById("line");
-            var left = this.document.getElementById("left");
-            var right = this.document.getElementById("right");
-            var box = this.document.getElementById("box");
+    
+
+    render() {
+        return (
+            <div className="backgroundOverlay">
+                <div className="privateChatWrapper" id="box">
+                    <MainPageLeft id="left"/>
+                    <div id="line"></div>
+                    <ChatWind id="right"/>
+                </div>
+                
+            </div>
+        ) 
+    }
+
+    componentDidMount(){ 
+            var line = document.getElementById("line");
+            var left = document.querySelector("#left"); // return null
+            var right = document.querySelector("#right"); // return null
+            var box = document.getElementById("box");
+            console.log("here is: "+ right)
             line.onmousedown = function(e) {
                 var startX = e.clientX;
                 line.left = line.offsetLeft;
@@ -21,8 +36,10 @@ export default class PrivateChat extends Component {
                     // add max and min widths for left part here
 
                     line.style.left = movement;
+                    // left.style.setProperty("width", movement + "px"); 
+                    // right.style.setProperty("width", (box.clientWidth - movement - 2 ) + "px");
                     left.style.width = movement + "px";
-                    right.style.width = (box.clientWidth - movement - 2 ) + "px";
+                    right.style.width = box.clientWidth - movement - 2 + "px";
                 }
                 this.onmouseup = function (eve) {
                     document.onmousemove = null;
@@ -32,20 +49,7 @@ export default class PrivateChat extends Component {
                 //line.setPointerCapture();
                 return false;
             }
-        }
-    }
-
-    render() {
-        return (
-            <div className="backgroundOverlay">
-                <div className="privateChatWrapper" id="box">
-                    <MainPageLeft id="left"/>
-                    <div id="line" onClick={this.handleDrag()}></div>
-                    <ChatWind id="right"/>
-                </div>
-                
-            </div>
-        ) 
+        
     }
 }
 
