@@ -19,7 +19,7 @@ An online chatting app using React. This is a practice project for learning Reac
 - UI 
   - [x] Sign in sign up page
   - [x] left-half chat window
-  - [ ] right-half chat window
+  - [x] right-half chat window
   - [x] Responsive layout
 - Account system
   - [ ] Log in
