@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './style.css';
 import ChatItem from '../ChatItem';
+import UserAvatar from '../UserAvatar';
 
 // import imgs 
 import emoji from './emoji.svg';
@@ -72,6 +73,7 @@ export default class ChatWind extends Component{
         const stBtn = {display:'inline-block'};
 
 
+
         return(
             <div className='chatWind'>
                 <div className='chatTitle'>
@@ -99,5 +101,3 @@ export default class ChatWind extends Component{
     }
 
 }
-
-// export default ChatWind;

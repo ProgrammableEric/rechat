@@ -37,3 +37,16 @@
     box-sizing: border-box;
 }
 
+#left{
+    position: relative;
+    float: left;
+    width: 260px;
+    height: 650px;
+}
+
+#right{
+    position: relative;
+    float: left;
+    width: 740px;
+    height: 650px;
+}

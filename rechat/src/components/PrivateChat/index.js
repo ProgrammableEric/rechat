@@ -8,24 +8,12 @@ export default class PrivateChat extends Component {
     
 
     render() {
-        return (
-            <div className="backgroundOverlay">
-                <div className="privateChatWrapper" id="box">
-                    <MainPageLeft id="left"/>
-                    <div id="line"></div>
-                    <ChatWind id="right"/>
-                </div>
-                
-            </div>
-        ) 
-    }
-
-    componentDidMount(){ 
+        function handleDrag (e){
             var line = document.getElementById("line");
-            var left = document.querySelector("#left"); // return null
-            var right = document.querySelector("#right"); // return null
+            var left = document.getElementById("left"); // return null
+            var right = document.getElementById("right"); // return null
             var box = document.getElementById("box");
-            console.log("here is: "+ right)
+            console.log("here is: "+ left);
             line.onmousedown = function(e) {
                 var startX = e.clientX;
                 line.left = line.offsetLeft;
@@ -46,11 +34,53 @@ export default class PrivateChat extends Component {
                     document.onmouseup = null;
                     // line.releasePointerCapture();
                 }
-                //line.setPointerCapture();
-                return false;
             }
-        
+        }
+
+        window.onload = function(e) {
+            var line = document.getElementById("line");
+            var left = document.getElementById("left");
+            var right = document.getElementById("right"); 
+            var box = document.getElementById("box");
+            line.onmousedown = function(e) {
+                var startX = e.clientX;
+                line.left = line.offsetLeft;
+                onmousemove = function (e) {
+                    var endX = e.clientX;
+                    var movement = line.left + (endX - startX);
+                    line.style.left = movement;
+                    left.style.width = movement + "px";
+                    if (movement < 220) {
+                        movement = 220;
+                        left.style.width = 220 + "px";
+                    } else if (movement>260) {
+                        movement = 260;
+                        left.style.width = 260 + "px";
+                    }
+                    console.log(movement);
+                    right.style.width = box.clientWidth - movement - 2 + "px";
+                }
+                onmouseup = function (eve) {
+                    onmousemove = null;
+                    onmouseup = null;
+                    
+                }
+            }
+        }
+
+        return (                                                               
+            <div className="backgroundOverlay">
+                <div className="privateChatWrapper" id="box">
+                    <div id="left"><MainPageLeft/></div>
+                    <div id="line"></div>
+                    <div id="right"><ChatWind/></div>
+                </div>
+                
+            </div>
+        ) 
     }
+
+    
 }
 
 
