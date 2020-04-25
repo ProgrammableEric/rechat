@@ -21,6 +21,14 @@
     transform: translate(-50%, -50%);
     font-size: 21px;
 }
+.groupchat{
+    display: flex;
+    transform: translate(94%, -50%);
+}
+.group {
+    width: 30px;
+    height: 30px;
+}
 
 .chatWin{
     display: block;

@@ -7,6 +7,7 @@ import UserAvatar from '../UserAvatar';
 import emoji from './emoji.svg';
 import plus from './plus.svg';
 import folder from './folder.svg';
+import groupchat from './groupchat.png';
 
 export default class ChatWind extends Component{
     constructor(props) {
@@ -79,6 +80,9 @@ export default class ChatWind extends Component{
                 <div className='chatTitle'>
                     <div className='name'>
                         {contactName}
+                    </div>
+                    <div className='groupchat'>
+                        <img className='group' src={groupchat}></img>
                     </div>
                 </div>
                 <div className='chatWin'>
